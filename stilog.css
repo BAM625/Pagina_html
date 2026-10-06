@@ -1,0 +1,310 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f0f12;
+    color: #ffffff;
+}
+
+
+.layout-plataforma {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0f0f12;
+    color: #ffffff;
+}
+
+
+.barra-lateral {
+    width: 250px;
+    background-color: #16161c;
+    border-right: 1px solid #262630;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 16px;
+    flex-shrink: 0;
+}
+
+.marca-sidebar {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #262630;
+}
+
+.marca-sidebar h2 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.menu-navegacion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.item-menu {
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    color: #b0b3b8;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.item-menu:hover, 
+.item-menu.activo {
+    background-color: #b71c1c;
+    color: #ffffff;
+}
+
+.btn-logout {
+    display: block;
+    text-align: center;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background-color: #21212a;
+    color: #e57373;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-logout:hover {
+    background-color: #b71c1c;
+    color: #ffffff;
+}
+
+
+.contenido-principal-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    overflow-y: auto;
+}
+
+.header-panel {
+    background-color: #16161c;
+    padding: 20px 32px;
+    border-bottom: 1px solid #262630;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-panel h1 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+
+.btn-volver {
+    color: #9da3af;
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid #292a38;
+    background-color: #1a1a24;
+    transition: all 0.2s;
+}
+
+.btn-volver:hover {
+    color: #ffffff;
+    border-color: #b71c1c;
+    background-color: #21212c;
+}
+
+.cuerpo-panel {
+    padding: 32px;
+    max-width: 1200px;
+}
+
+.cuerpo-panel h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+
+.seccion-busqueda {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 26px;
+}
+
+.input-busqueda {
+    width: 100%;
+    max-width: 480px;
+    background-color: #16161f;
+    border: 1px solid #292a38;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+
+.input-busqueda:focus {
+    border-color: #b71c1c;
+    box-shadow: 0 0 8px rgba(183, 28, 28, 0.4);
+}
+
+.chips-filtros {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.chip {
+    background-color: #1f202c;
+    border: 1px solid #2b2d3d;
+    color: #9da3af;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.chip:hover, .chip.activo {
+    background-color: #b71c1c;
+    color: #ffffff;
+    border-color: #b71c1c;
+}
+
+
+.grid-cartas-juegos {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fill, minmax(180px, 200px));
+    gap: 20px;
+    width: 100%;
+}
+
+.card-juego {
+    background-color: #16161f;
+    border: 1px solid #292a38;
+    border-radius: 12px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-juego:hover {
+    transform: translateY(-5px);
+    border-color: #b71c1c;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 180px;           
+    background-color: #111116;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img-wrap img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important; 
+    display: block !important;
+    transition: transform 0.3s ease;
+}
+
+.card-juego:hover .card-img-wrap img {
+    transform: scale(1.08);
+}
+
+
+.overlay-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 20, 0.88); 
+    backdrop-filter: blur(3px);          
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;                        
+    transition: opacity 0.25s ease;      
+    z-index: 2;
+}
+
+
+.card-juego:hover .overlay-hover {
+    opacity: 1;
+}
+
+.precio-juego {
+    color: #4caf50;
+    font-weight: 800;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-buy {
+    background-color: #b71c1c;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(183, 28, 28, 0.4);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-buy:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+/* PIE DE LA CARTA */
+.card-pie {
+    padding: 12px 14px;
+    background-color: #16161f;
+}
+
+.card-pie h4 {
+    margin: 0 0 4px 0;
+    font-size: 0.95rem;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-pie span {
+    font-size: 0.75rem;
+    color: #8c8ea3;
+    display: block;
+}

@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Great Vibes';
+    background-color: #0f0f12;
+    color: #ffffff;
+}
+h2{
+    font-family: 'Great Vibes';
+}
+
+
+.layout-plataforma {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0f0f12;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.barra-lateral {
+    width: 250px;
+    background-color: #16161c;
+    border-right: 1px solid #262630;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 16px;
+    flex-shrink: 0;
+}
+
+.marca-sidebar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #262630;
+}
+
+.marca-sidebar h2 {
+    font-size: 1.15rem;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.menu-navegacion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.item-menu {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    color: #b0b3b8;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.item-menu:hover {
+    background-color: #21212a;
+    color: #ffffff;
+}
+
+.item-menu.activo {
+    background-color: #b71c1c;
+    color: #ffffff;
+}
+
+.btn-logout {
+    display: block;
+    text-align: center;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background-color: #21212a;
+    color: #e57373;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.btn-logout:hover {
+    background-color: #b71c1c;
+    color: #ffffff;
+}
+
+
+.contenido-principal-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.header-panel {
+    background-color: #16161c;
+    padding: 20px 32px;
+    border-bottom: 1px solid #262630;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-panel h1 {
+    font-size: 1.4rem;
+    margin: 0;
+    color: #ffffff;
+}
+
+.info-usuario {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #cfd3dc;
+}
+
+.info-usuario strong {
+    color: #4caf50;
+}
+
+.cuerpo-panel {
+    padding: 32px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+.cuerpo-panel h2 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+
+.grid-appstore {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.tarjeta-store {
+    background-color: #21212b;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #2d2d3a;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta-store:hover {
+    transform: translateY(-5px);
+    border-color: #b71c1c;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+}
+
+.portada-store {
+    width: 100%;
+    height: 165px;
+    background: radial-gradient(circle at center, #2e2e40 0%, #171720 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    position: relative;
+}
+
+.portada-accion { background: radial-gradient(circle at center, #3d1c24 0%, #171720 100%); }
+.portada-arcade { background: radial-gradient(circle at center, #3b1f47 0%, #171720 100%); }
+.portada-mundo { background: radial-gradient(circle at center, #1b382e 0%, #171720 100%); }
+.portada-deportes { background: radial-gradient(circle at center, #16324a 0%, #171720 100%); }
+.portada-estrategia { background: radial-gradient(circle at center, #3a2b16 0%, #171720 100%); }
+.portada-rpg { background: radial-gradient(circle at center, #231d42 0%, #171720 100%); }
+
+.icono-store {
+    max-width: 119%;
+    max-height: auto;
+    object-fit: contain;
+    border-radius: 18px;
+    transition: transform 0.20s ease;
+}
+
+.tarjeta-store:hover .icono-store {
+    transform: scale(1.00);
+}
+
+.info-store {
+    padding: 14px 16px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 8px;
+    background-color: #21212b;
+}
+
+.texto-store h4 {
+    margin: 0 0 3px 0;
+    font-size: 0.95rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.texto-store small {
+    color: #9da3af;
+    font-size: 0.75rem;
+    display: block;
+}
+
+.badge-store {
+    background-color: #2a2a38;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #363646;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.tarjeta-store:hover .badge-store {
+    background-color: #b71c1c;
+    border-color: #b71c1c;
+    color: #ffffff;
+}
+
+.contenido-principal-panel::-webkit-scrollbar {
+    width: 6px;
+}
+
+.contenido-principal-panel::-webkit-scrollbar-track {
+    background: #16161c;
+}
+
+.contenido-principal-panel::-webkit-scrollbar-thumb {
+    background: #b71c1c;
+    border-radius: 4px;
+}
